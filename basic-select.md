@@ -85,7 +85,7 @@ FROM CITY
 WHERE ID=1661; 
 ```
 
-# [Japanese Cities' Attributes](https://www.hackerrank.com/challenges/japanese-cities-attributes/problem)**
+# **[Japanese Cities' Attributes](https://www.hackerrank.com/challenges/japanese-cities-attributes/problem)**
 
 Query all attributes of every Japanese city in the CITY table. The COUNTRYCODE for Japan is JPN.
 
