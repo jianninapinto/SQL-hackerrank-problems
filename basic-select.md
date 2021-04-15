@@ -125,5 +125,5 @@ The CITY table is described as follows:
 ```sql
 SELECT NAME
 FROM CITY 
-WHERE COUNTRYCODE='JPN';;        
+WHERE COUNTRYCODE='JPN';        
 ```
