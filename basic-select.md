@@ -195,7 +195,7 @@ total number of records - number of unique city names = 3-2=1
 SELECT (COUNT(CITY) - COUNT(DISTINCT(CITY)))
 FROM STATION;       
 ```
-#**[Weather Observation Station 5](https://www.hackerrank.com/challenges/weather-observation-station-5/problem)**
+# **[Weather Observation Station 5](https://www.hackerrank.com/challenges/weather-observation-station-5/problem)**
 
 Query the two cities in STATION with the shortest and longest CITY names, as well as their respective lengths (i.e.: number of characters in the name). If there is more than one smallest or largest city, choose the one that comes first when ordered alphabetically.
 The STATION table is described as follows:
@@ -240,7 +240,7 @@ FROM STATION
 ORDER BY LENGTH(CITY) DESC, CITY ASC
 LIMIT 1;    
 ```
-#**[Weather Observation Station 6](https://raw.githubusercontent.com/chhayac/SQL-hackerrank-problems/master/basic-select.md)**
+# **[Weather Observation Station 6](https://raw.githubusercontent.com/chhayac/SQL-hackerrank-problems/master/basic-select.md)**
 
 Query the list of CITY names starting with vowels (i.e., a, e, i, o, or u) from STATION. Your result cannot contain duplicates.
 
@@ -263,4 +263,28 @@ where LAT_N is the northern latitude and LONG_W is the western longitude.
 SELECT DISTINCT CITY 
 FROM STATION
 WHERE CITY LIKE 'A%' OR CITY LIKE 'E%' OR CITY LIKE 'I%' OR CITY LIKE 'O%' OR CITY LIKE 'U%';      
+```
+# **[Weather Observation Station 7](https://www.hackerrank.com/challenges/weather-observation-station-7/problem)**
+
+Query the list of CITY names ending with vowels (a, e, i, o, u) from STATION. Your result cannot contain duplicates.
+
+Input Format
+
+The STATION table is described as follows:
+
+|  Field | Type |
+|---|---|
+| ID  | NUMBER |
+| CITY | VARCHAR2(21)   |
+| STATE  | VARCHAR2(2)  |
+| LAT_N |  NUMBER |
+| LONG_W | NUMBER |
+
+where LAT_N is the northern latitude and LONG_W is the western longitude.
+
+**Solution**
+```sql
+SELECT DISTINCT CITY 
+FROM STATION
+WHERE CITY LIKE '%a' OR CITY LIKE '%e' OR CITY LIKE '%i' OR CITY LIKE '%o' OR CITY LIKE '%u';;       
 ```
