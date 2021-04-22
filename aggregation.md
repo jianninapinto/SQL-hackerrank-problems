@@ -40,3 +40,24 @@ SELECT SUM(POPULATION)
 FROM CITY 
 WHERE DISTRICT = 'CALIFORNIA';
 ```
+
+# **[Revising Aggregations - Averages](https://www.hackerrank.com/challenges/revising-aggregations-the-average-function/problem)**
+
+Query the average population of all cities in CITY where District is California.
+
+Input Format
+
+|  Field | Type |
+|---|---|
+| ID  | NUMBER |
+| NAME | VARCHAR2(17)   |
+| COUNTRY CODE  | VARCHAR2(3)  |
+| DISTRICT |  VARCHAR2(20) |
+| POPULATION | NUMBER |
+
+**Solution**
+```sql
+SELECT AVG(POPULATION)
+FROM CITY
+WHERE DISTRICT= 'CALIFORNIA';
+```
