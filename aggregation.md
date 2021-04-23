@@ -119,3 +119,62 @@ WHERE COUNTRYCODE ='JPN';
 SELECT MAX(POPULATION) - MIN(POPULATION)
 FROM CITY;
 ```
+
+# **[The Blunder](https://www.hackerrank.com/challenges/the-blunder/problem)**
+
+Samantha was tasked with calculating the average monthly salaries for all employees in the EMPLOYEES table, but did not realize her keyboard's  key was broken until after completing the calculation. She wants your help finding the difference between her miscalculation (using salaries with any zeros removed), and the actual average salary.
+
+Write a query calculating the amount of error (i.e.:  average monthly salaries), and round it up to the next integer.
+
+Input Format
+
+The EMPLOYEES table is described as follows:
+
+|  COLUMN | TYPE | 
+|---|---|
+| ID  | INTEGER |
+| NAME | STRING |
+| SALARY | INTEGER |
+
+Note: Salary is per month.
+
+Constraints
+
+1000 < Salary < 10<sup>5
+
+Sample Input
+
+|  ID | NAME | SALARY |
+|---|---|---|
+| 1  | KRISTEEN | 1420 |
+| 2 | ASHLEY | 2006 |
+| 3 | JULIA | 2210 |
+| 4 |  MARIA | 3000 |
+
+Sample Output
+
+2061
+
+Explanation
+
+The table below shows the salaries without zeros as they were entered by Samantha:
+
+|  ID | NAME | SALARY |
+|---|---|---|
+| 1  | KRISTEEN | 142 |
+| 2 | ASHLEY | 26 |
+| 3 | JULIA | 221 |
+| 4 |  MARIA | 3 |
+
+
+Samantha computes an average salary of . The actual average salary is .
+
+The resulting error between the two calculations is . Since it is equal to the integer , it does not get rounded up.
+
+**Solution**
+```sql
+SELECT 
+    ROUND(AVG(SALARY)) -
+    ROUND(AVG(REPLACE(SALARY, '0','')))
+FROM EMPLOYEES;
+```
