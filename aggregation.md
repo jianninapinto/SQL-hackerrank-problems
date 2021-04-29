@@ -295,14 +295,6 @@ The STATION table is described as follows:
 
 where LAT_N is the northern latitude and LONG_W is the western longitude.
 
-Output Format
-
-Your results must be in the form:
-
-lat lon
-
-where lat is the sum of all values in LAT_N and lon is the sum of all values in LONG_W. Both results must be rounded to a scale of 2 decimal places.
-
 **Solution**
 ```sql
 SELECT TRUNCATE(SUM(LAT_N), 4)
@@ -310,3 +302,27 @@ FROM STATION
 WHERE LAT_N BETWEEN 38.7880 AND 137.2345;
 ```
 
+# **[Weather Observation Station 14](https://www.hackerrank.com/challenges/weather-observation-station-14/problem)**
+
+Query the greatest value of the Northern Latitudes (LAT_N) from STATION that is less than . Truncate your answer to  decimal places.
+
+Input Format
+
+The STATION table is described as follows:
+
+|  Field | Type |
+|---|---|
+| ID  | NUMBER |
+| CITY | VARCHAR2(21)   |
+| STATE | VARCHAR2(2)  |
+| LAT_N |  NUMBER |
+| LONG_W | NUMBER |
+
+where LAT_N is the northern latitude and LONG_W is the western longitude.
+
+**Solution**
+```sql
+SELECT TRUNCATE(MAX(LAT_N), 4)
+FROM STATION
+WHERE LAT_N < 137.2345;
+```
