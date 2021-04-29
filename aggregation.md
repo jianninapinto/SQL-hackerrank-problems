@@ -276,3 +276,37 @@ where lat is the sum of all values in LAT_N and lon is the sum of all values in 
 SELECT ROUND(SUM(LAT_N), 2), ROUND(SUM(LONG_W), 2)
 FROM STATION;
 ```
+
+# **[Weather Observation Station 13](https://www.hackerrank.com/challenges/weather-observation-station-13/problem)**
+
+Query the sum of Northern Latitudes (LAT_N) from STATION having values greater than 38.7882 and less than 137.2345. Truncate your answer to 4 decimal places.
+
+Input Format
+
+The STATION table is described as follows:
+
+|  Field | Type |
+|---|---|
+| ID  | NUMBER |
+| CITY | VARCHAR2(21)   |
+| STATE | VARCHAR2(2)  |
+| LAT_N |  NUMBER |
+| LONG_W | NUMBER |
+
+where LAT_N is the northern latitude and LONG_W is the western longitude.
+
+Output Format
+
+Your results must be in the form:
+
+lat lon
+
+where lat is the sum of all values in LAT_N and lon is the sum of all values in LONG_W. Both results must be rounded to a scale of 2 decimal places.
+
+**Solution**
+```sql
+SELECT TRUNCATE(SUM(LAT_N), 4)
+FROM STATION
+WHERE LAT_N BETWEEN 38.7880 AND 137.2345;
+```
+
