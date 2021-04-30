@@ -329,7 +329,7 @@ WHERE LAT_N < 137.2345;
 
 # **[Weather Observation Station 15](https://www.hackerrank.com/challenges/weather-observation-station-15/problem)**
 
-Query the Western Longitude (LONG_W) for the largest Northern Latitude (LAT_N) in STATION that is less than . Round your answer to  decimal places.
+Query the Western Longitude (LONG_W) for the largest Northern Latitude (LAT_N) in STATION that is less than 137.2345. Round your answer to 4 decimal places.
 
 Input Format
 
@@ -352,4 +352,19 @@ FROM STATION
 WHERE LAT_N < 137.2345
 ORDER BY LAT_N DESC 
 LIMIT 1;
+```
+
+# **[Weather Observation Station 16](https://www.hackerrank.com/challenges/weather-observation-station-15/problem)**
+
+Query the smallest Northern Latitude (LAT_N) from STATION that is greater than 38.7780. Round your answer to 4 decimal places.
+
+Input Format
+
+The STATION table is described as follows:
+
+**Solution**
+```sql
+SELECT ROUND(MIN(LAT_N), 4)
+FROM STATION
+WHERE LAT_N > 38.7780;
 ```
