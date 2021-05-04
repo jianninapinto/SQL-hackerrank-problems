@@ -385,3 +385,39 @@ WHERE LAT_N > 38.7780
 ORDER BY LAT_N
 LIMIT 1;
 ```
+
+# **[Population Census](https://www.hackerrank.com/challenges/asian-population/problem)**
+
+Given the CITY and COUNTRY tables, query the sum of the populations of all cities where the CONTINENT is 'Asia'.
+
+Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
+
+Input Format
+
+CITY
+|  Field | Type |
+|---|---|
+| ID  | NUMBER |
+| NAME | VARCHAR2(17)   |
+| COUNTRYCODE | VARCHAR2(3)  |
+| DISTRICT |  VARCHAR2(20) |
+| POPULATION | NUMBER |
+
+COUNTRY
+|  Field | Type |
+|---|---|
+| CODE  | VARCHAR2(3) |
+| NAME | VARCHAR2(44)   |
+| CONTINENT | VARCHAR2(13)  |
+| REGION |  VARCHAR2(25) |
+| POPULATION | NUMBER |
+
+
+**Solution**
+```sql
+SELECT SUM(CITY.POPULATION)
+FROM CITY
+JOIN COUNTRY
+ON CITY.COUNTRYCODE = COUNTRY.CODE
+WHERE CONTINENT = 'ASIA';
+```
