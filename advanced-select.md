@@ -68,7 +68,7 @@ Input Format
 |  Column | Type |
 |-------|-----|
 | Name | String |
-| Occupation | STRING |
+| Occupation | String |
 
 The OCCUPATIONS table is described as follows:  Occupation will only contain one of the following values: Doctor, Professor, Singer or Actor.
 
