@@ -551,9 +551,10 @@ STATION
 | LAT_N |  NUMBER |
 | LONG_W | NUMBER |
     
-    where LAT_N is the northern latitude and LONG_W is the western longitude.
+where LAT_N is the northern latitude and LONG_W is the western longitude.
 
-    **Solution**
+    
+**Solution**
 ```sql
 -- The Euclidean Distance is sqrt((a-b)2 + (c-d)2) --
     
