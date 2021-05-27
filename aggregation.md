@@ -524,7 +524,7 @@ where LAT_N is the northern latitude and LONG_W is the western longitude.
 
 **Solution**
 ```sql
----The Manhattan Distance is |x1 - x2| + |y1 - y2| = |a - c| + |b - d|---
+/* The Manhattan Distance is |x1 - x2| + |y1 - y2| = |a - c| + |b - d| */
     
 SELECT ROUND(ABS(MIN(LAT_N)-MAX(LAT_N)) + ABS(MIN(LONG_W)-MAX(LONG_W)), 4)
 FROM STATION;
